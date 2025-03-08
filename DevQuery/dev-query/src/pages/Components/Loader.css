@@ -1,0 +1,83 @@
+/* CubeLoader.css */
+.cube-loader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    gap: 8px;
+  }
+  
+  .cube {
+    width: 3%;
+    height: 100%;
+    background-color: #11d964db;
+    animation:cube-animation 1.2s cubic-bezier(0, 0, 0.2, 1)  infinite alternate;
+  }
+  
+  .cube:nth-child(1) {
+    height: 0%;
+    max-height: 40%;
+    animation-delay: 0s;
+  }
+  
+  .cube:nth-child(2) {
+    height: 0%;
+    max-height: 45%;
+    animation-delay: 0.3s;
+  }
+  
+  .cube:nth-child(3) {
+    height: 0%;
+    max-height: 50%;
+    animation-delay: 0.6s;
+  }
+  
+  .cube:nth-child(4) {
+    height: 0%;
+    max-height: 100%;
+    animation-delay: 0.9s;
+  }
+  
+  .cube:nth-child(5) {
+    height: 0%;
+    max-height: 100%;
+    animation-delay: 1.2s;
+  }
+  
+  .cube:nth-child(6) {
+    height: 0%;
+    max-height: 50%;
+    animation-delay: 1.5s;
+  }
+  
+  .cube:nth-child(7) {
+    height: 0%;
+    max-height: 45%;
+    animation-delay: 1.8s;
+  }
+  
+  .cube:nth-child(8) {
+    height: 0%;
+    max-height: 50%;
+    animation-delay: 2.1s;
+  }
+  
+  @keyframes cube-animation {
+    0% {
+      height: 0%;
+      transform: scaleY(0.15);
+      box-shadow: none;
+    }
+    50% {
+      height: 100%;
+      transform: scaleY(1);
+      box-shadow: 1px 1px 10px 2px #11d96497;
+    }
+    100% {
+      transform: scaleY(0.15);
+      box-shadow: none;
+      height: 0%;
+    }
+  }
+  

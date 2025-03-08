@@ -1,0 +1,229 @@
+/* Dark theme styles */
+.view-queries {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+    background: hsl(0, 0%, 7%); /* Darker background for main container */
+}
+
+.v-query-card {
+    flex-grow: 1;
+    background: #1C2526; 
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: min(50%,250px);
+    height: 220px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #2A2E31;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.v-query-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: #BB86FC; 
+}
+
+.v-query-title {
+    all: unset;
+    font-weight: 600;
+    font-size: 18px;
+    color: #BB86FC; 
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.v-query-desc {
+    font-size: 14px;
+    color: #CFD8DC;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.03); /* Subtle overlay effect */
+    border-radius: 6px;
+    line-height: 1.4;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+.v-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.v-tag {
+    background: #18ac9e; /* Teal shade for tags */
+    color: rgb(240, 238, 238); /* White text for better contrast */
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.v-tag:hover {
+    background: #4db6acaf; /* Lighter teal on hover */
+    cursor: pointer;
+}
+
+.v-query-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #B0BEC5;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.v-query-user {
+    color: #FFB300; /* Warm amber for usernames */
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.v-query-date {
+    color: #66BB6A; /* Soft green for timestamps */
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .view-queries {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .v-query-card {
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+/* ========================== */
+/* New Dropdown Styles Below  */
+/* ========================== */
+
+/* Ensure the filter container is positioned properly */
+.filter-container {
+    position: relative; /* Allows absolute positioning for the dropdown */
+    display: inline-block;
+}
+
+/* Filter icon button */
+.filter-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.filter-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Dropdown styles */
+.filter-dropdown {
+    position: absolute;
+    top: 40px; /* Adjusts dropdown position below the button */
+    right: 0;
+    background: #1C2526;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 140px;
+    z-index: 10; /* Ensures dropdown is above other elements */
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 8px;
+    font-size: small;
+    color: #5cc053;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-option img {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Highlight the last applied filter */
+.filter-option.active {
+    background-color: rgba(83, 82, 82, 0.555);
+    color: white;
+    border-radius: 5px;
+}
+
+.filter-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.sort-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #BB86FC;
+    transition: fill 0.3s ease, transform 0.2s ease;
+}
+
+.sort-icon:hover svg {
+    fill: #E0AFFF; /* Lighter purple on hover */
+    transform: scale(1.1);
+}
+
+@keyframes spinRefresh {
+    0% {
+        transform: rotate(0deg); 
+    }
+    30%{
+        transform: rotate(120deg); 
+    }
+    60% {
+        transform: rotate(240deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.refresh{
+    margin-right: auto;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: #1e1e1f;
+}
+.refresh.disabled{
+    cursor:not-allowed;
+}
+.refresh img.spin {
+    animation: spinRefresh 0.6s ease-out;
+}
+
+
+
+/* Fix dropdown behavior for smaller screens */
+@media (max-width: 600px) {
+    .filter-dropdown {
+        right: auto;
+        left: 0; /* Aligns dropdown properly for mobile */
+    }
+}

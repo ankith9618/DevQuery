@@ -1,0 +1,111 @@
+.query-card-container {
+  width: 90%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05); /* Glassmorphic background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.query-card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.query-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.query-card-update-date {
+  font-size: 12px;
+  color: #b0eaff;
+}
+
+.query-card-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffe066;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.query-card-tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.query-card-action-btn span {
+  color: #ddd;
+}
+
+.query-card-action-btn .query-card-icon {
+  width: 20px;
+  height: 20px;
+  fill: #aaa;
+}
+
+.query-card-action-btn .query-card-liked {
+  fill: #1cff00;
+}
+
+.query-card-no-query {
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+.query-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.query-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.query-card-footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+.query-card-actions {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.query-card-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.username {
+  margin-left: auto; 
+  position: relative;
+  top: 20px;
+  color: rgba(166, 166, 25, 0.762);
+}
+
+
+.posted-by-me{
+  .username{
+    color: #42d42fcb;
+  }
+  background: rgba(17, 17, 17, 0.305);;
+}

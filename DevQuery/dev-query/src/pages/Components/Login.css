@@ -1,0 +1,162 @@
+/* src/Login.css */
+
+/* Centering the Login Form */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Login Container (Glass Effect) */
+.login-container {
+  background: rgba(30, 30, 30, 0.593); 
+  backdrop-filter: blur(20px);
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0.95;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Heading */
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #07f44ed1; /* Purple Neon */
+  text-shadow: 0px 0px 8px #07f44ea7;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Labels */
+.login-container label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  font-size: 14px;
+  color: #39d98a; /* Neon Green */
+  background: rgba(30, 30, 30, 0.8);
+  padding: 2px 6px;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1); /* Glass input */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Autofill Fix */
+input:-webkit-autofill {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Input Focus */
+input:focus {
+  outline: none;
+  border-color: #61dafb; /* Neon Blue */
+  box-shadow: 0px 0px 8px rgba(97, 218, 251, 0.6);
+}
+
+/* Password Input */
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  letter-spacing: 1px;
+}
+
+/* Password Toggle */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease-in-out;
+}
+
+.toggle-password:hover {
+  color: #61dafb; /* Neon Blue */
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background: rgba(44, 140, 102, 0.8); /* Glass Green */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: rgba(31, 112, 79, 0.9);
+  box-shadow: 0px 0px 12px rgba(31, 112, 79, 0.7);
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c; /* Red */
+  font-size: 1em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Signup Link */
+.signup-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Signup Link Styling */
+.signup-link .link {
+  color: #61dafb; /* Neon Blue */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  text-shadow: 0px 0px 8px rgba(97, 218, 251, 0.8);
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.login-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,84 @@
+/* Sidebar.css */
+.sidebar {
+  background: rgba(14, 14, 15, 0.8);
+  backdrop-filter: blur(10px); 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: width 0.3s;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+  opacity: 0.92;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(43, 71, 100, 0.615); 
+  transform: scale(1.05); 
+  transition: background-color 1s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.sidebar-link.active {
+  background-color: rgba(41, 128, 185, 0.7); 
+  border-radius: 8px;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.sidebar button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: rgba(52, 73, 94, 0.7); /* Consistent with links */
+}
+
+.sidebar button.logout {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.sidebar button.logout:hover {
+  background-color: rgba(192, 57, 43, 0.7); /* Semi-transparent red background */
+  color: white; /* Ensure text remains visible */
+}
+
+
+.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,54 @@
+.search-bar {
+    position: sticky;
+    top: 0;
+    /* background: rgba(255, 255, 255, 0.1);  */
+    backdrop-filter:blur(10px);
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    will-change: transform; 
+}
+
+.search-bar .filter-icon {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease; /* Removed transform transition */
+}
+
+.search-bar .filter-icon:hover {
+    background-color: #e0e0e0;
+}
+
+.search-bar .filter-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.queries {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overscroll-behavior: smooth; /* Smooth overscroll */
+    will-change: scroll-position; /* Optimize scrolling */
+    padding-bottom: 20px; /* Prevent content clipping */
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

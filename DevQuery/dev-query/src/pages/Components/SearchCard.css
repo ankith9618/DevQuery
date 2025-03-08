@@ -1,0 +1,27 @@
+
+  .search-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 5px;
+  }
+
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 300px;
+  }
+  
+  .search-button {
+    all: unset;
+    background: rgba(23, 137, 186, 0.684);
+    padding: 5px 10px;
+    border-radius:6px;
+  }
+  
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
